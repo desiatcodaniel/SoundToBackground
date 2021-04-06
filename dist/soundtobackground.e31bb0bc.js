@@ -117,9 +117,31 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.js":[function(require,module,exports) {
-console.log('hello world');
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"images/kat.jpeg":[function(require,module,exports) {
+module.exports = "/kat.106c8b13.jpeg";
+},{}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _kat = _interopRequireDefault(require("./images/kat.jpeg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function loadImage(src) {
+  const img = new Image();
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+  img.src = src; // Load image into canvas
+
+  img.addEventListener('load', () => {
+    // Set width, height to dynamically adjust to image being used.
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+  }, false);
+}
+
+loadImage(_kat.default);
+},{"./images/kat.jpeg":"images/kat.jpeg"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +169,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59919" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
