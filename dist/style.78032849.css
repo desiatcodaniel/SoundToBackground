@@ -20,6 +20,9 @@ body {
 .navbar-toggler {
   z-index: 10;
 }
+#after {
+  background: url("/beachBG.4a6645e0.jpeg");
+}
 
 
 /*# sourceMappingURL=/style.78032849.css.map */

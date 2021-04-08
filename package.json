@@ -34,6 +34,10 @@
     "last 3 safari versions"
   ],
   "dependencies": {
-    "@popperjs/core": "^2.9.2"
+    "@popperjs/core": "^2.9.2",
+    "@tensorflow-models/body-pix": "^2.1.0",
+    "@tensorflow/tfjs": "^3.3.0",
+    "try": "^0.13.3",
+    "waait": "^1.0.5"
   }
 }
