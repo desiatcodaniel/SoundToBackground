@@ -15,7 +15,7 @@ function loadImage (src) {
     ctx.drawImage(img, 0, 0)
   }, false)
   // Call pop if using gray effect
-  filterBG(true)
+  filterBG()
 }
 
 async function filterBG (isPop = false) {

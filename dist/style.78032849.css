@@ -22,6 +22,8 @@ body {
 }
 #after {
   background: url("/beachBG.4a6645e0.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
