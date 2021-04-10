@@ -20,10 +20,16 @@ body {
 .navbar-toggler {
   z-index: 10;
 }
-#after {
-  background: url("/beachBG.4a6645e0.jpeg");
+
+.canvas-area {
+  box-sizing: border-box;
+}
+img {
   background-repeat: no-repeat;
   background-size: cover;
+}
+.hidden {
+  display: none;
 }
 
 
