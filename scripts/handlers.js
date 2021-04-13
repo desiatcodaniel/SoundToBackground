@@ -5,9 +5,10 @@ import image from '../images/couple.jpeg'
 const canvas = loadImage(image)
 
 export const handleClick = async (e) => {
-  const spinner = e.currentTarget.querySelector('.hidden')
-  console.log(e.currentTarget)
-  spinner.classList.toggle('hidden')
+  // Select spinner to toggle
+  const toggler = e.currentTarget.querySelectorAll('span')
+  toggler.forEach(item => item.classList.toggle('hidden'))
+  console.log(toggler)
   await filterBG(canvas, e.currentTarget.textContent)
-  spinner.classList.toggle('hidden')
+  toggler.forEach(item => item.classList.toggle('hidden'))
 }
