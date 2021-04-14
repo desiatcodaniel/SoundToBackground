@@ -1,6 +1,6 @@
 import { loadImage } from './generateCanvas'
 import { filterBG } from './filter'
-import image from '../images/couple.jpeg'
+import image from '../images/sample.webp'
 
 const canvas = loadImage(image)
 
