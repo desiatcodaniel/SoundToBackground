@@ -10,5 +10,6 @@ export const handleClick = async (e) => {
   toggler.forEach(item => item.classList.toggle('hidden'))
   console.log(toggler)
   await filterBG(canvas, e.currentTarget.textContent)
+  // change to practice sourcetree
   toggler.forEach(item => item.classList.toggle('hidden'))
 }
