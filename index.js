@@ -10,3 +10,5 @@ buttons.forEach(button => {
 })
 
 uploadBtn.addEventListener('change', handleUpload)
+
+// CREATE VIDEO CAPABILITY NEXT
