@@ -4,7 +4,6 @@ import backgrounds from './backgrounds'
 
 export async function filterBG (imageToSegment, textContent) {
   const filter = textContent.trim()
-  console.log(filter)
   // Select resulting image place
   const resultArea = document.querySelector('img')
   if (filter !== 'Original') {
