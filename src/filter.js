@@ -23,7 +23,6 @@ export async function filterBG (imageToSegment, filter) {
   const ctx = imageToSegment.getContext('2d')
   // Pull out imageData of the entire image
   const { data: imgData } = ctx.getImageData(0, 0, imageToSegment.width, imageToSegment.height)
-  console.log(imgToMap, imgData)
   // Create a new imageData that is the same size
   const newImg = ctx.createImageData(imageToSegment.width, imageToSegment.height)
   const { data: newImgData } = newImg
