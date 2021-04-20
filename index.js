@@ -1,4 +1,4 @@
-import { handleClick, handleUpload } from './scripts/handlers'
+import { handleClick, handleUpload } from './src/handlers'
 // Select elements for file upload and image to be replaced
 const uploadBtn = document.querySelector('#uploaded-file')
 // Select all buttons to choose what background to load
