@@ -14,10 +14,10 @@ export async function filterBG (imageToSegment, filter) {
 
   // Segment image
   /**********************
-   * imgToMap - The indices will show 1 if it is part of the person, 0 if not
-   * imgData - Will show RGBA values of each imgToMap index(image pixel) imgToMap[0] will
-   *              have imgData[0,1,2,3] as its RGBA
-   */
+  * imgToMap - The indices will show 1 if it is part of the person, 0 if not
+  * imgData - Will show RGBA values of each imgToMap index(image pixel) imgToMap[0] will
+  *              have imgData[0,1,2,3] as its RGBA
+  */
   // Pull out imageData of the detected person/s
   const { data: imgToMap } = await net.segmentPerson(imageToSegment, { internalResolution: 'full' })
   const ctx = imageToSegment.getContext('2d')
