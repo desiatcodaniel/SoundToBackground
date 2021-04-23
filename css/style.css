@@ -34,6 +34,14 @@ img {
   max-width: 65vw;
   max-height: 50vh;
 }
+.caption {
+  height: 4rem;
+  background-color: hsla(120, 14%, 11%, 0.7);
+}
+.text-detected {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
 main button {
   min-width: 8rem;
   min-height: 3rem;
