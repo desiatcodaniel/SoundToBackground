@@ -18,6 +18,13 @@ export default function startSpeech() {
   recognition.interimResults = false;
   // Similar to defining a callback for a listener
   recognition.onresult = handleInput;
-  // Start listening
+
+  // Set initial listener
   recognition.start();
+  // Set it so that it never stops listening
+  recognition.onend = () => {
+    console.log('Restarting');
+    // Start listening again
+    recognition.start();
+  };
 }

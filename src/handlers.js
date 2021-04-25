@@ -1,20 +1,21 @@
-import { loadImage } from './generateCanvas';
+import loadImage from './generateCanvas';
 import filterBG from './filter';
 import backgrounds from './images';
 
-function extractWord({ results }) {
-  // Return the word command
-  return results[results.length - 1][0].transcript;
-}
 // Array of valid commands
 const commands = ['original', 'grayscale', 'greyscale', 'tropical', 'romantic'];
+let detectedSpeech = '';
 
+// Check if speech is valid and extract command
 function checkWord({ results }) {
   const word = results[results.length - 1][0].transcript;
 
   let isValid = false;
   commands.forEach((command) => {
-    if (word.includes(command)) isValid = true;
+    if (word.includes(command)) {
+      isValid = true;
+      detectedSpeech = command;
+    }
   });
   return isValid;
 }
@@ -37,7 +38,7 @@ export const handleInput = async (e) => {
 
   // Execute for voice commands
   if (e.results && checkWord(e)) {
-    filter = extractWord(e).trim();
+    filter = detectedSpeech;
 
     // Change text of caption bar
     const caption = document.querySelector('.text-detected');

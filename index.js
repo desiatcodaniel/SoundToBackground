@@ -9,11 +9,10 @@ const buttons = document.querySelectorAll('.bg-buttons');
 buttons.forEach((button) => {
   button.addEventListener('click', handleInput);
 });
-// const safeSpeech = async () => {
-//   await startSpeech();
-// };
-// safeSpeech();
-startSpeech();
+const safeSpeech = async () => {
+  await startSpeech();
+};
+safeSpeech();
 
 uploadBtn.addEventListener('change', handleUpload);
 
